@@ -74,9 +74,8 @@ if(randomNumber == 1){
 } else if(randomNumber == 3) {
     computerMove = 'nożyce';
 }
-*/
 
-/*
+
 if(playerInput == '1'){
     playerMove = 'kamień';
 } else if(playerInput == '2'){
@@ -84,9 +83,7 @@ if(playerInput == '1'){
 } else if(playerInput == '3'){
     playerMove = 'nożyce';
 }
-*/
 
-/*
 // Wynik gry
 if(computerMove == 'kamień' && playerMove == 'papier'){
     printMessage('Ty wygrywasz!');
