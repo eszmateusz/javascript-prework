@@ -1,3 +1,5 @@
+{
+
 function getMoveName(argMoveId){
     if(argMoveId == 1){
       return 'kamień';
@@ -11,7 +13,28 @@ function getMoveName(argMoveId){
     }
   }
 
-  function displayResult(argComputerMove, argPlayerMove){
+
+// Odczytywanie ruchu komputera
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+console.log('Wylosowana liczba to: ' + randomNumber);
+
+let argComputerMove = getMoveName(randomNumber);
+
+printMessage('Mój ruch to: ' + argComputerMove);
+
+
+// Odczytanie ruchu gracza
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+
+console.log('Gracz wpisał: ' + playerInput);
+
+let argPlayerMove = getMoveName(playerInput);
+
+printMessage('Twój ruch to: ' + argPlayerMove);
+
+
+function displayResult(argComputerMove, argPlayerMove){
     console.log('moves:', argComputerMove, argPlayerMove);
     if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
       return 'Ty wygrywasz!';
@@ -35,31 +58,13 @@ function getMoveName(argMoveId){
       return 'Użyłeś błędnej wartości. Spróbuj jeszcze raz.';
     } else if(argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
       return 'Użyłeś błędnej wartości. Spróbuj jeszcze raz.';
-    } else(argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
+    } else (argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
       return 'Użyłeś błędnej wartości. Spróbuj jeszcze raz.';
     }
-    printMessage('REZULTAT: ' + displayResult(argComputerMove, argPlayerMove));
-  }
+    }
+  printMessage('WYNIK GRY: ' + displayResult(argComputerMove, argPlayerMove));
 
-// Odczytywanie ruchu komputera
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-console.log('Wylosowana liczba to: ' + randomNumber);
-
-let argComputerMove = getMoveName(randomNumber);
-
-printMessage('Mój ruch to: ' + argComputerMove);
-
-
-// Odczytanie ruchu gracza
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-
-console.log('Gracz wpisał: ' + playerInput);
-
-let argPlayerMove = getMoveName(playerInput);
-
-printMessage('Twój ruch to: ' + argPlayerMove);
-
+}
 
 /*
 if(randomNumber == 1){
