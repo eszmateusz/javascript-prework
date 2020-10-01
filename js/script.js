@@ -11,12 +11,42 @@ function getMoveName(argMoveId){
     return 'nieznany ruch';
   }
 
+  function displayResult(argComputerMove, argPlayerMove){
+    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+  
+    if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+      printMessage('Ty wygrywasz!');
+    } else(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+      printMessage('Wygrał komputer!');
+    } else(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+      printMessage('Jest remis!');
+    } else(argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+      printMessage('Ty wygrywasz!');
+    } else(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+      printMessage('Wygrał komputer!');
+    } else(argComputerMove == 'papier' && argPlayerMove == 'papier'){
+      printMessage('Jest remis!');
+    } else(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+      printMessage('Ty wygrywasz!');
+    } else(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+      printMessage('Wygrał komputer!');
+    } else(argComputerMove == 'nożyce' && argClayerMove == 'nożyce'){
+      printMessage('Jest remis!');
+    } else(argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
+      printMessage('Użyłeś błędnej wartości. Spróbuj jeszcze raz.');
+    } else(argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
+      printMessage('Użyłeś błędnej wartości. Spróbuj jeszcze raz.');
+    } else(argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
+      printMessage('Użyłeś błędnej wartości. Spróbuj jeszcze raz.');
+    }
+
 // Odczytywanie ruchu komputera
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber);
+
 /*
 if(randomNumber == 1){
     computerMove = 'kamień';
@@ -26,6 +56,7 @@ if(randomNumber == 1){
     computerMove = 'nożyce';
 }
 */
+
 printMessage('Mój ruch to: ' + computerMove);
 
 // Odczytanie ruchu gracza
@@ -43,7 +74,10 @@ if(playerInput == '1'){
     playerMove = 'nożyce';
 }
 */
+
 printMessage('Twój ruch to: ' + playerMove);
+
+/*
 
 // Wynik gry
 if(computerMove == 'kamień' && playerMove == 'papier'){
@@ -71,3 +105,5 @@ if(computerMove == 'kamień' && playerMove == 'papier'){
 } else if(computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
     printMessage('Użyłeś błędnej wartości. Spróbuj jeszcze raz.');
 }
+
+*/
