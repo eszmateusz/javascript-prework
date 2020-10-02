@@ -23,7 +23,7 @@
 
     let argComputerMove = getMoveName(randomNumber);
 
-    printMessage('Mój ruch to: ' + argComputerMove);
+    printMessage('Ruch komputera to: ' + argComputerMove);
 
     // Odczytanie ruchu gracza
     // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
