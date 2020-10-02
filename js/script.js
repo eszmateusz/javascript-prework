@@ -52,16 +52,12 @@ function displayResult(argComputerMove, argPlayerMove){
       return 'Ty wygrywasz!';
     } else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
       return 'Wygrał komputer!';
-    } else if(argComputerMove == 'nożyce' && argClayerMove == 'nożyce'){
+    } else if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
       return 'Jest remis!';
-    } else if(argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
-      return 'Użyłeś błędnej wartości. Spróbuj jeszcze raz.';
-    } else if(argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
-      return 'Użyłeś błędnej wartości. Spróbuj jeszcze raz.';
-    } else (argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
+    } else{
       return 'Użyłeś błędnej wartości. Spróbuj jeszcze raz.';
     }
-    }
+  }
   printMessage('WYNIK GRY: ' + displayResult(argComputerMove, argPlayerMove));
 
 }
