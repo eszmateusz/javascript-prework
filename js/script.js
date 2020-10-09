@@ -17,20 +17,20 @@
     }
 
     // Odczytywanie ruchu komputera
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    let argComputerMove = getMoveName(randomNumber);
+    const argComputerMove = getMoveName(randomNumber);
 
     printMessage('Ruch komputera to: ' + argComputerMove);
 
     // Odczytanie ruchu gracza
-    // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+    // const playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
     console.log('Gracz wpisał: ' + playerInput);
 
-    let argPlayerMove = getMoveName(playerInput);
+    const argPlayerMove = getMoveName(playerInput);
 
     printMessage('Twój ruch to: ' + argPlayerMove);
 
